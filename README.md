@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -10,12 +10,14 @@
 
 <style>
 
+/* RESET */
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
+/* BASE BACKGROUND */
 body{
     min-height:100vh;
     display:flex;
@@ -30,8 +32,20 @@ body{
     font-family:'Poppins',sans-serif;
 }
 
-.card{
+/* HIDE PAGES */
+.page{
+    display:none;
+    width:100%;
+    justify-content:center;
+    align-items:center;
+}
 
+.active{
+    display:flex;
+}
+
+/* CARD STYLE (PAGE 1) */
+.card{
     width:90%;
     max-width:420px;
 
@@ -58,27 +72,19 @@ body{
     display:block;
     width:220px;
     max-width:100%;
-
     margin:0 auto 25px auto;
-
     filter:drop-shadow(0 10px 15px rgba(0,0,0,.25));
 }
 
 button{
     width:100%;
-
     padding:15px;
-
     border:none;
     border-radius:999px;
-
     background:#ffd4e3;
-
     font-size:13px;
     font-weight:600;
-
     cursor:pointer;
-
     transition:.2s;
 }
 
@@ -87,28 +93,109 @@ button:disabled{
     cursor:not-allowed;
 }
 
+/* GAME UI (PAGE 2 & 3) */
+.gameCard{
+    width:85%;
+    max-width:360px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:20px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 0 25px rgba(0,0,0,0.6);
+    animation:pop .3s ease;
+}
+
+@keyframes pop{
+    from{transform:scale(0.8);opacity:0;}
+    to{transform:scale(1);opacity:1;}
+}
+
+.gameCard h2{
+    font-size:18px;
+    margin-bottom:20px;
+    color:#fff;
+}
+
+.row{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+}
+
+.gameBtn{
+    padding:12px 22px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:14px;
+    min-width:100px;
+    transition:.2s;
+}
+
+.gameBtn:hover{
+    transform:scale(1.05);
+}
+
+.yes{
+    background:#4CAF50;
+    color:white;
+}
+
+.no{
+    background:#f44336;
+    color:white;
+}
+
 </style>
 </head>
+
 <body>
 
-<div class="card">
+<!-- PAGE 1 -->
+<div id="page1" class="page active">
+    <div class="card">
 
-    <h1 class="title">
-        Hi my baby :33
-    </h1>
+        <h1 class="title">Hi my baby :33</h1>
 
-    <img src="IceBear.jpg" class="bear">
+        <img src="IceBear.jpg" class="bear">
 
-    <button id="nextBtn" disabled>
-        next :3 (5)
-    </button>
+        <button id="nextBtn" disabled>
+            next :3 (5)
+        </button>
 
+    </div>
+</div>
+
+<!-- PAGE 2 -->
+<div id="page2" class="page">
+    <div class="gameCard">
+        <h2>Do you want to continue?</h2>
+
+        <div class="row">
+            <button class="gameBtn yes" onclick="goPage3()">Yes</button>
+            <button class="gameBtn no" onclick="alert('Okay bye 😭')">No</button>
+        </div>
+    </div>
+</div>
+
+<!-- PAGE 3 -->
+<div id="page3" class="page">
+    <div class="gameCard">
+        <h2>I got a surprise baby, wanna see it?</h2>
+
+        <div class="row">
+            <button class="gameBtn yes" onclick="alert('Aww you said YES 😳💖')">Yes</button>
+            <button class="gameBtn no" onclick="alert('Maybe next time 😭')">No</button>
+        </div>
+    </div>
 </div>
 
 <script>
 
+/* PAGE 1 COUNTDOWN */
 let seconds = 5;
-
 const btn = document.getElementById("nextBtn");
 
 const countdown = setInterval(() => {
@@ -116,23 +203,26 @@ const countdown = setInterval(() => {
     seconds--;
 
     if(seconds > 0){
-
         btn.innerHTML = `next :3 (${seconds})`;
-
     }else{
-
         clearInterval(countdown);
-
         btn.disabled = false;
-
         btn.innerHTML = "next :3";
 
         btn.onclick = () => {
-            window.location.href = "page2.html";
+            document.getElementById("page1").classList.remove("active");
+            document.getElementById("page2").classList.add("active");
         };
     }
 
 },1000);
+
+
+/* PAGE NAV */
+function goPage3(){
+    document.getElementById("page2").classList.remove("active");
+    document.getElementById("page3").classList.add("active");
+}
 
 </script>
 
