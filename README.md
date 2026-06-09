@@ -1,139 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For You ❤️</title>
+<html>
+<body style="
+margin:0;
+background:url('flowers.jpg');
+background-size:cover;
+background-position:center;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+font-family:Georgia;
+">
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+<div style="
+background:rgba(255,255,255,0.8);
+padding:30px;
+border-radius:25px;
+width:80%;
+max-width:400px;
+text-align:center;
+">
 
-body{
-    font-family:Arial, sans-serif;
-    background:linear-gradient(135deg,#ff7eb3,#ff758c);
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    color:white;
-    padding:20px;
-}
+<h1 style="color:#ff8fab;">Hi Love ❤️</h1>
 
-.container{
-    width:100%;
-    max-width:400px;
-}
+<p>I made something just for you.</p>
 
-h1{
-    margin-bottom:15px;
-}
+<button onclick="openLetter()"
+style="
+width:100%;
+padding:15px;
+margin-top:10px;
+border:none;
+border-radius:999px;
+">
+💌 Open Letter
+</button>
 
-button{
-    width:100%;
-    padding:15px;
-    border:none;
-    border-radius:15px;
-    margin-top:10px;
-    font-size:16px;
-    cursor:pointer;
-    background:white;
-    color:#ff4f81;
-    font-weight:bold;
-}
+<button onclick="startCountdown()"
+style="
+width:100%;
+padding:15px;
+margin-top:10px;
+border:none;
+border-radius:999px;
+">
+🎁 Countdown to Surprise
+</button>
 
-.card{
-    display:none;
-    background:rgba(255,255,255,.15);
-    backdrop-filter:blur(10px);
-    padding:20px;
-    border-radius:20px;
-    margin-top:15px;
-}
+<div id="letter" style="display:none;margin-top:20px;">
+To my love,<br><br>
+Thank you for being here. You make every day better. ❤️
+</div>
 
-#countdown{
-    font-size:32px;
-    font-weight:bold;
-    margin-top:15px;
-}
-</style>
-</head>
-<body>
+<div id="surprise" style="display:none;margin-top:20px;">
+<span id="timer">10</span>
+</div>
 
-<div class="container">
-    <h1>Hi Love ❤️</h1>
-    <p>I made something just for you.</p>
-
-    <button onclick="openLetter()">
-        💌 Open Letter
-    </button>
-
-    <button onclick="startCountdown()">
-        🎁 Reveal Surprise
-    </button>
-
-    <div class="card" id="letter">
-        <h2>To My Love ❤️</h2>
-        <br>
-        <p>
-            Thank you for being part of my life.
-            You've made ordinary days feel special,
-            and even when things aren't perfect,
-            I still find comfort knowing you're here.
-            <br><br>
-            No matter where life takes us,
-            you'll always hold a place in my heart.
-            <br><br>
-            I love you. ❤️
-        </p>
-    </div>
-
-    <div class="card" id="surprise">
-        <div id="countdown">10</div>
-    </div>
 </div>
 
 <script>
 function openLetter(){
-    document.getElementById("letter").style.display="block";
+ document.getElementById("letter").style.display="block";
 }
 
 function startCountdown(){
+ let count=10;
+ document.getElementById("surprise").style.display="block";
 
-    const box = document.getElementById("surprise");
-    const timer = document.getElementById("countdown");
+ let x=setInterval(function(){
+  count--;
+  document.getElementById("timer").innerHTML=count;
 
-    box.style.display="block";
-
-    let count = 10;
-
-    timer.innerHTML = count;
-
-    const interval = setInterval(() => {
-
-        count--;
-        timer.innerHTML = count;
-
-        if(count <= 0){
-            clearInterval(interval);
-
-            box.innerHTML = `
-                <h2>🎉 Surprise! 🎉</h2>
-                <br>
-                <p>
-                    Out of all the people in the world,
-                    I'd still choose you.
-                    <br><br>
-                    I love you more than words can explain. ❤️
-                </p>
-            `;
-        }
-
-    },1000);
+  if(count<=0){
+   clearInterval(x);
+   document.getElementById("surprise").innerHTML=
+   "🌸 Surprise! I love you more than words can say. ❤️";
+  }
+ },1000);
 }
 </script>
 
