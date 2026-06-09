@@ -1,63 +1,67 @@
-<!DOCTYPE html>
-<html>
+
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <title>For My Baby ❤️</title>
 
 <style>
-body{
+
+*{
     margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
     min-height:100vh;
-
-    background:url('Background.jpg');
-    background-size:cover;
-    background-position:center;
-
     display:flex;
     justify-content:center;
     align-items:center;
+
+    background-image:url('Background.jpg');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 
     font-family:'Poppins',sans-serif;
 }
 
 .card{
-    width:85%;
-    max-width:400px;
 
-    background:rgba(255,255,255,0.85);
+    width:90%;
+    max-width:420px;
 
-    backdrop-filter:blur(8px);
+    background:rgba(255,255,255,.85);
+    backdrop-filter:blur(10px);
 
     border-radius:30px;
 
-    padding:25px;
+    padding:30px;
 
     text-align:center;
 
-    box-shadow:0 10px 30px rgba(0,0,0,.15);
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
 }
 
-h1{
+.title{
     font-family:'Parisienne',cursive;
-    color:#ff7ea8;
+    color:#ff7ca5;
     font-size:3rem;
     margin-bottom:20px;
 }
 
-img{
+.bear{
+    display:block;
     width:220px;
     max-width:100%;
 
-    border-radius:20px;
+    margin:0 auto 25px auto;
 
-    margin-bottom:20px;
-
-    filter:
-    drop-shadow(0 8px 12px rgba(0,0,0,.25));
+    filter:drop-shadow(0 10px 15px rgba(0,0,0,.25));
 }
 
 button{
@@ -66,33 +70,71 @@ button{
     padding:15px;
 
     border:none;
-
     border-radius:999px;
 
-    background:#ffd3e1;
+    background:#ffd4e3;
 
-    font-size:18px;
+    font-size:13px;
+    font-weight:600;
 
     cursor:pointer;
 
-    font-weight:600;
+    transition:.2s;
 }
+
+button:disabled{
+    opacity:.7;
+    cursor:not-allowed;
+}
+
 </style>
 </head>
-
 <body>
 
 <div class="card">
 
-    <h1>Hi my baby :33</h1>
+    <h1 class="title">
+        Hi my baby :33
+    </h1>
 
-    <img src="IceBear.jpg" alt="Ice Bear">
+    <img src="IceBear.jpg" class="bear">
 
-    <button onclick="window.location.href='page2.html'">
-        Next :3
+    <button id="nextBtn" disabled>
+        next :3 (5)
     </button>
 
 </div>
+
+<script>
+
+let seconds = 5;
+
+const btn = document.getElementById("nextBtn");
+
+const countdown = setInterval(() => {
+
+    seconds--;
+
+    if(seconds > 0){
+
+        btn.innerHTML = `next :3 (${seconds})`;
+
+    }else{
+
+        clearInterval(countdown);
+
+        btn.disabled = false;
+
+        btn.innerHTML = "next :3";
+
+        btn.onclick = () => {
+            window.location.href = "page2.html";
+        };
+    }
+
+},1000);
+
+</script>
 
 </body>
 </html>
