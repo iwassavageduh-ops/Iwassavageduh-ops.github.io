@@ -175,7 +175,9 @@ button:disabled{
 
         <div class="row">
             <button class="gameBtn yes" onclick="goPage3()">Yes</button>
-            <button class="gameBtn no" onclick="alert('Okay bye 😭')">No</button>
+            <button id="noBtn1" class="gameBtn no" onclick="removeNoButton()">
+                No
+            </button>
         </div>
     </div>
 </div>
@@ -186,14 +188,82 @@ button:disabled{
         <h2>I got a surprise baby, wanna see it?</h2>
 
         <div class="row">
-            <button class="gameBtn yes" onclick="alert('Aww you said YES 😳💖')">Yes</button>
-            <button class="gameBtn no" onclick="alert('Maybe next time 😭')">No</button>
+            <button class="gameBtn yes" onclick="goPage5()">
+                Yes
+            </button>
+
+            <button class="gameBtn no" onclick="goSecretEnding()">
+                No
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- PAGE 4 SECRET ENDING -->
+<div id="page4" class="page">
+    <div class="gameCard">
+        <h2>Secret Ending ❤️</h2>
+
+        <p style="color:white;margin-bottom:20px;">
+            Aww, you found the secret ending.
+        </p>
+
+        <div class="row">
+            <button class="gameBtn yes" onclick="goPage5()">
+                Continue
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- PAGE 5 CUSTOM PAGE -->
+<div id="page5" class="page">
+    <div class="gameCard">
+        <h2>Customize Me ✨</h2>
+
+        <p style="color:white;margin-bottom:20px;">
+            Replace this text with anything you want.
+        </p>
+
+        <div class="row">
+            <button class="gameBtn yes">
+                Your Button
+            </button>
         </div>
     </div>
 </div>
 
 <script>
 
+    let noClicks = 0;
+
+function removeNoButton(){
+
+    const btn = document.getElementById("noBtn1");
+
+    noClicks++;
+
+    btn.style.transform = `scale(${1 - noClicks * 0.2})`;
+
+    if(noClicks >= 4){
+        btn.remove();
+    }
+}
+function goSecretEnding(){
+
+    document.getElementById("page3").classList.remove("active");
+    document.getElementById("page4").classList.add("active");
+}
+
+function goPage5(){
+
+    document.getElementById("page3").classList.remove("active");
+    document.getElementById("page4").classList.remove("active");
+
+    document.getElementById("page5").classList.add("active");
+}
+
+    
 /* PAGE 1 COUNTDOWN */
 let seconds = 5;
 const btn = document.getElementById("nextBtn");
