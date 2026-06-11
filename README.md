@@ -171,7 +171,7 @@ button:disabled{
 <!-- PAGE 2 -->
 <div id="page2" class="page">
     <div class="gameCard">
-        <h2>Do you want to continue?</h2>
+        <h2>I have a surprise for you, wanna see it?</h2>
 
         <div class="row">
             <button class="gameBtn yes" onclick="goPage3()">Yes</button>
@@ -185,7 +185,8 @@ button:disabled{
 <!-- PAGE 3 -->
 <div id="page3" class="page">
     <div class="gameCard">
-        <h2>I got a surprise baby, wanna see it?</h2>
+        <h2>Awww, my baby is not nagtatampo na ^^
+            did you miss me??</h2>
 
         <div class="row">
             <button class="gameBtn yes" onclick="goPage5()">
@@ -202,7 +203,7 @@ button:disabled{
 <!-- PAGE 4 SECRET ENDING -->
 <div id="page4" class="page">
     <div class="gameCard">
-        <h2>Secret Ending ❤️</h2>
+        <h2>You really dont miss me po? :((</h2></h2>
 
         <p style="color:white;margin-bottom:20px;">
             Aww, you found the secret ending.
@@ -216,10 +217,25 @@ button:disabled{
     </div>
 </div>
 
-<!-- PAGE 5 CUSTOM PAGE -->
+!-- PAGE 5 -->
 <div id="page5" class="page">
     <div class="gameCard">
-        <h2>Customize Me ✨</h2>
+        <h2>Aww, Im glad that you do.
+        i missed you, my baby. do u wanna see my letter na?</h2>
+
+        <div class="row">
+            <button class="gameBtn yes" onclick="goPage6()">Yes</button>
+            <button id="noBtn1" class="gameBtn no" onclick="removeNoButton()">
+                No
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- PAGE 6 CUSTOM PAGE -->
+<div id="page6" class="page">
+    <div class="gameCard">
+        <h2>Letter lagay q</h2>
 
         <p style="color:white;margin-bottom:20px;">
             Replace this text with anything you want.
