@@ -203,10 +203,10 @@ button:disabled{
 <!-- PAGE 4 SECRET ENDING -->
 <div id="page4" class="page">
     <div class="gameCard">
-        <h2>You really dont miss me po? :((</h2></h2>
+        <h2>You really dont miss me po? :((</h2>
 
         <p style="color:white;margin-bottom:20px;">
-            Aww, you found the secret ending.
+            Are you still mad at me for what Ive told you? :(
         </p>
 
         <div class="row">
