@@ -217,7 +217,7 @@ button:disabled{
     </div>
 </div>
 
-!-- PAGE 5 -->
+<!-- PAGE 5 -->
 <div id="page5" class="page">
     <div class="gameCard">
         <h2>Aww, Im glad that you do.
