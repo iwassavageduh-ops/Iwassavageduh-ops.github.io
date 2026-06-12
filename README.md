@@ -79,40 +79,36 @@ body{
     font-weight:600;
 }
 
-.letter{
-    display:none;
-
-    margin-top:25px;
-
-    padding:20px;
-
-    border-radius:20px;
-
-    background:rgba(255,255,255,.7);
-
-    text-align:left;
-
-    color:#444;
-
-    animation:fadeIn .5s ease;
+.buttonRow{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin-top:20px;
 }
 
-@keyframes fadeIn{
-
-    from{
-        opacity:0;
-        transform:translateY(10px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+button{
+    width:120px;
+    padding:12px;
+    border:none;
+    border-radius:999px;
+    cursor:pointer;
+    font-weight:600;
 }
 
-.letter h3{
+.yesBtn{
+    background:#9ee493;
+}
+
+.noBtn{
+    background:#ff8ba7;
+    color:white;
+}
+
+.message{
+    margin-top:20px;
     color:#ff7ca5;
-    margin-bottom:10px;
+    font-weight:600;
+    min-height:60px;
 }
 
 </style>
@@ -120,10 +116,11 @@ body{
 
 <body>
 
-<div class="card">
+<!-- PAGE 1 -->
+<div id="page1" class="card">
 
     <h1 class="title">
-        For my Euanne.
+        Hi my baby :33
     </h1>
 
     <img
@@ -138,35 +135,66 @@ body{
         Touch the flower 🌸 (0/3)
     </p>
 
-    <div id="letter" class="letter">
+</div>
 
-        <h3>May I Court youm</h3>
+<!-- PAGE 2 -->
+<div id="page2" class="card" style="display:none;">
 
-        <p>
+    <h1 class="title" style="font-size:2.2rem;">
+        May I ask something?
+    </h1>
 
-            test
+    <div class="buttonRow">
 
-            <br><br>
+        <button
+            class="yesBtn"
+            onclick="goPage3()">
+            Yes
+        </button>
 
-            test
-
-            <br><br>
-
-            test
-
-            <br><br>
-
-            Love,
-            <br>
-            Your Baby ❤️
-
-        </p>
+        <button
+            id="noBtn"
+            class="noBtn"
+            onclick="pressNo()">
+            No
+        </button>
 
     </div>
+
+    <p id="sadText" class="message"></p>
+
+</div>
+
+<!-- PAGE 3 -->
+<div id="page3" class="card" style="display:none;">
+
+    <h1 class="title" style="font-size:2.2rem;">
+        Put Your Question Here
+    </h1>
+
+    <div class="buttonRow">
+
+        <button
+            class="yesBtn">
+            Yes
+        </button>
+
+        <button
+            id="noBtn2"
+            class="noBtn"
+            onclick="pressNo2()">
+            No
+        </button>
+
+    </div>
+
+    <p id="sadText2" class="message"></p>
 
 </div>
 
 <script>
+
+/* FLOWER PAGE */
 
 let taps = 0;
 
@@ -179,19 +207,100 @@ function tapFlower(){
 
     const flower = document.getElementById("flower");
 
-    flower.style.transform = "scale(0.95)";
+    flower.style.transform = "scale(.95)";
 
-    setTimeout(() => {
+    setTimeout(()=>{
         flower.style.transform = "scale(1)";
-    }, 120);
+    },100);
 
     if(taps >= 3){
 
-        document.getElementById("tapText").innerHTML =
-            "Take your time to read, my baby";
+        document.getElementById("page1").style.display = "none";
+        document.getElementById("page2").style.display = "block";
 
-        document.getElementById("letter").style.display =
-            "block";
+    }
+}
+
+/* PAGE 2 */
+
+let noClicks = 0;
+
+const messages = [
+
+    "Aww, are you nagtatampo po??",
+
+    "Bawal pa rin po? :((",
+
+    "Please give me a chance po",
+
+    "I beg you baby, please :((",
+
+    "Sorry baby, please let me ask. Ill kiss you in exchange of removing the no button :pp"
+
+];
+
+function pressNo(){
+
+    const noBtn = document.getElementById("noBtn");
+    const text = document.getElementById("sadText");
+
+    text.innerHTML = messages[noClicks];
+
+    noClicks++;
+
+    let scale = 1 - (noClicks * 0.18);
+
+    noBtn.style.transform = `scale(${scale})`;
+
+    if(noClicks >= 5){
+
+        noBtn.remove();
+
+    }
+}
+
+function goPage3(){
+
+    document.getElementById("page2").style.display = "none";
+    document.getElementById("page3").style.display = "block";
+
+}
+
+/* PAGE 3 */
+
+let noClicks2 = 0;
+
+const messages2 = [
+
+    "First custom message",
+
+    "Second custom message",
+
+    "Third custom message",
+
+    "Fourth custom message",
+
+    "Fifth custom message"
+
+];
+
+function pressNo2(){
+
+    const noBtn = document.getElementById("noBtn2");
+    const text = document.getElementById("sadText2");
+
+    text.innerHTML = messages2[noClicks2];
+
+    noClicks2++;
+
+    let scale = 1 - (noClicks2 * 0.18);
+
+    noBtn.style.transform = `scale(${scale})`;
+
+    if(noClicks2 >= 5){
+
+        noBtn.remove();
+
     }
 }
 
