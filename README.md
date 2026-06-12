@@ -175,9 +175,10 @@ button{
     <div class="buttonRow">
 
         <button
-            class="yesBtn">
-            Yes
-        </button>
+    class="yesBtn"
+    onclick="goPage4()">
+    Yes
+    </button>
 
         <button
             id="noBtn2"
@@ -189,6 +190,140 @@ button{
     </div>
 
     <p id="sadText2" class="message"></p>
+
+<!-- PAGE 4 -->
+
+<div id="page4" class="card" style="display:none;">
+
+    <h1 class="title" style="font-size:2rem;">
+        Yayyy. Please read this, baby ❤️
+    </h1>
+
+    <div style="
+        text-align:left;
+        line-height:1.8;
+        color:#444;
+        max-height:60vh;
+        overflow-y:auto;
+        padding-right:10px;
+    ">
+
+        <p>
+
+    <p>
+
+    Hi baby ^^ I want to say thank you, thank you for giving me a chance to be your suitor.
+
+    <br><br>
+
+    I will use this chance to prove myself to you, that I am worthy of your love and also prove that you're worthy of being pursued.
+
+    <br><br>
+
+    I won't waste any moment to make you feel loved, heard, and seen. I will love you the same way Tita does. I'll love every inch of you, no matter what version it is that you show to me.
+
+    <br><br>
+
+    I will listen to everything that you yap to me about, no matter how random or small you think it is.
+
+    <br><br>
+
+    You matter, baby.
+
+    <br><br>
+
+    I've heard everything you've told me—from your favorites, insecurities, dislikes, likes, traumas, and even the things that you thought didn't matter.
+
+    <br><br>
+
+    I still remember all of those, baby. Because remembering and understanding you more means keeping you closer into my heart and making you a part of me.
+
+    <br><br>
+
+    I'll never get tired of understanding you, may I be tired myself or drained. As understanding you means that I'm always understanding myself.
+
+    <br><br>
+
+    You are my baby, my wife, and someone that I would spend eternity with.
+
+    <br><br>
+
+    You've bewitched my body and soul, my baby. You took me as a whole, you took me like I was something that originally belonged to you.
+
+    <br><br>
+
+    And maybe that was true. Maybe we originally belonged to each other in our past lives. It only took us some time to find each other again because we wouldn't be able to love each other as a whole if we didn't get to know ourselves first.
+
+    <br><br>
+
+    I will never leave you, my baby.
+
+    <br><br>
+
+    No matter how tough things will be, you will never see me give up on us.
+
+    <br><br>
+
+    That is something that I would stake my life on.
+
+    <br><br>
+
+    That I will love you unconditionally and beyond.
+
+    <br><br>
+
+    I'm sorry if sometimes I was too much, that I kept asking you the same thing or kept trying to talk to you even if you didn't want to.
+
+    <br><br>
+
+    I don't want you to feel alone.
+
+    <br><br>
+
+    Please bear with me, baby.
+
+    <br><br>
+
+    I'm still trying to learn the best way to love you, to love you in a way that you'll feel the most.
+
+    <br><br>
+
+    I will never ever get tired of knowing you more.
+
+    <br><br>
+
+    You will always be my baby, and I will never let anyone get close to me again.
+
+    <br><br>
+
+    I will do everything with you, only you.
+
+    <br><br>
+
+    There wouldn't be a purpose in doing things I find fun with somebody else. I already have you.
+
+    <br><br>
+
+    I'll love you to the point that everyone who sees me will remember you, because I want you to be engraved in everyone's mind that you are my baby.
+
+    <br><br>
+
+    Lastly, I can promise you that no matter what happens, you will still be my baby at the end of the day.
+
+    <br><br>
+    I love you so much, my baby. Ill always be proud of you no matter what. Mwaa
+
+    <br><br><br>
+
+    <b>
+    — Your Husband, Carlo ❤️
+    </b>
+
+    <p>
+
+    </div>
+
+</div>
 
 </div>
 
@@ -259,6 +394,13 @@ function pressNo(){
     }
 }
 
+    function goPage4(){
+
+    document.getElementById("page3").style.display = "none";
+    document.getElementById("page4").style.display = "block";
+
+    }
+    
 function goPage3(){
 
     document.getElementById("page2").style.display = "none";
