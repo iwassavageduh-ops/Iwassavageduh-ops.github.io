@@ -169,7 +169,7 @@ button{
 <div id="page3" class="card" style="display:none;">
 
     <h1 class="title" style="font-size:2.2rem;">
-        Put Your Question Here
+        May I court you?
     </h1>
 
     <div class="buttonRow">
@@ -272,15 +272,15 @@ let noClicks2 = 0;
 
 const messages2 = [
 
-    "First custom message",
+    "You dont want me to court you po? :((",
 
-    "Second custom message",
+    "Please give me a chance, baby :((",
 
-    "Third custom message",
+    "I promise, Ill treat you the best po",
 
-    "Fourth custom message",
+    "Is that final po? :((",
 
-    "Fifth custom message"
+    "Im sure na baby, Ill court you whether you allow me to court you or not. I want to show you na you're someone worth being pursued."
 
 ];
 
