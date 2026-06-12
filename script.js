@@ -70,8 +70,8 @@ let noClicks2 = 0;
 const messages2 = [
     "Awww, you dont want me to pursue you po?",
     "Please baby, give me a chance to prove myself to you",
-    "Ill prove with my actions that you're worthy of everything, that you're worthy of loved.",
-    "I love you, my baby. Please let yourself be loved this time. Be loved by me. :((",
+    "I'll prove with my actions that you're worthy of everything, that you're worthy of being loved.",
+    "I love you, my baby. Please let yourself be loved this time. Let yourself be loved by me. :((",
     "Please, my Euanne. Let me court you.  Its time for us to take our relationship to a step higher, for us to be a little more closer into getting married. I love you, I love your heart, personality, eyes, lips, everything. I love you for being you, Euanne. I want to show you how serious I am to you, and prove that you're for being pursued and loved unconditionally."
 ];
 
