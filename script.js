@@ -5,7 +5,7 @@ function tapFlower(){
     taps++;
 
     document.getElementById("tapText").innerHTML =
-        `Touch the flower 🌸 (${taps}/3)`;
+        `Touch the flower 3 times 🌸`;
 
     const flower = document.getElementById("flower");
 
