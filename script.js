@@ -30,7 +30,7 @@ const messages = [
     "Bawal pa rin po? :((",
     "Please give me a chance po",
     "I beg you baby, please :((",
-    "Sorry baby, please let me ask. Ill kiss you in exchange of removing the no button :pp"
+    "Sorry baby, please hear me out. Ill kiss you in exchange of removing the no button po :pp"
 ];
 
 function pressNo(){
@@ -72,7 +72,7 @@ const messages2 = [
     "Please give me a chance, baby :((",
     "I promise, Ill treat you the best po",
     "Is that final po? :((",
-    "Im sure na baby, Ill court you whether you allow me to court you or not. I want to show you na you're someone worth being pursued."
+    "Please, baby? Let me court you, I want to court you whether you allow me to court you or not. I want to show you na you're someone worth being pursued."
 ];
 
 function pressNo2(){
