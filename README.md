@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -34,7 +33,6 @@ body{
 }
 
 .card{
-
     width:90%;
     max-width:420px;
 
@@ -58,7 +56,6 @@ body{
 }
 
 .flower{
-
     display:block;
     width:220px;
     max-width:100%;
@@ -77,16 +74,12 @@ body{
 }
 
 .tapText{
-
     color:#ff7ca5;
-
     font-size:15px;
-
     font-weight:600;
 }
 
 .letter{
-
     display:none;
 
     margin-top:25px;
@@ -123,59 +116,56 @@ body{
 }
 
 </style>
-
 </head>
 
 <body>
 
 <div class="card">
 
-```
-<h1 class="title">
-    Hi my baby :33
-</h1>
+    <h1 class="title">
+        Hi my baby :33
+    </h1>
 
-<img
-    src="Flowers.jpg"
-    id="flower"
-    class="flower"
-    onclick="tapFlower()"
-    alt="Flower Bouquet"
->
+    <img
+        src="Flowers.jpg"
+        id="flower"
+        class="flower"
+        onclick="tapFlower()"
+        alt="Flower Bouquet"
+    >
 
-<p id="tapText" class="tapText">
-    Touch the flower 🌸 (0/3)
-</p>
-
-<div id="letter" class="letter">
-
-    <h3>For You ❤️</h3>
-
-    <p>
-
-        Replace this entire message with your own letter.
-
-        <br><br>
-
-        This section only appears after the flower has been tapped
-        three times.
-
-        <br><br>
-
-        You can write anything here:
-        a confession, apology, appreciation message,
-        memories together, or your surprise.
-
-        <br><br>
-
-        Love,
-        <br>
-        Your Baby ❤️
-
+    <p id="tapText" class="tapText">
+        Touch the flower 🌸 (0/3)
     </p>
 
-</div>
-```
+    <div id="letter" class="letter">
+
+        <h3>For You ❤️</h3>
+
+        <p>
+
+            Replace this entire message with your own letter.
+
+            <br><br>
+
+            This section only appears after the flower has been tapped
+            three times.
+
+            <br><br>
+
+            You can write anything here:
+            a confession, apology, appreciation message,
+            memories together, or your surprise.
+
+            <br><br>
+
+            Love,
+            <br>
+            Your Baby ❤️
+
+        </p>
+
+    </div>
 
 </div>
 
