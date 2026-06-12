@@ -120,7 +120,7 @@ button{
 <div id="page1" class="card">
 
     <h1 class="title">
-        Hi my baby :33
+        For my Euanne.
     </h1>
 
     <img
