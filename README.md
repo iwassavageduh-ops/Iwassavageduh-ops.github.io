@@ -159,7 +159,7 @@ button:disabled{
 
         <h1 class="title">Hi my baby :33</h1>
 
-        <img src="IceBear.jpg" class="bear">
+        <img src="Flowers.jpg" class="bear">
 
         <button id="nextBtn" disabled>
             next :3 (5)
