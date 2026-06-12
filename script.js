@@ -27,10 +27,10 @@ let noClicks = 0;
 
 const messages = [
     "Aww, are you nagtatampo po??",
-    "Bawal pa rin po? :((",
-    "Please give me a chance po",
-    "I beg you baby, please :((",
-    "Sorry baby, please hear me out. Ill kiss you in exchange of removing the no button po :pp"
+    "Still not allowed to ask? :((",
+    "Arent you curious about my question, baby?",
+    "I promise you, baby. It will be worthy of your time.",
+    "Sorry baby, but please hear me out. Ill kiss you in exchange of removing the no button po :pp"
 ];
 
 function pressNo(){
@@ -68,10 +68,10 @@ function goPage4(){
 let noClicks2 = 0;
 
 const messages2 = [
-    "You dont want me to court you po? :((",
-    "Please give me a chance, baby :((",
-    "I promise, Ill treat you the best po",
-    "Is that final po? :((",
+    "Awww, you dont want me to pursue you po?",
+    "Please baby, give me a chance to prove myself to you",
+    "Ill prove with my actions that you're worthy of everything, that you're worthy of loved.",
+    "I love you, my baby. Please let yourself be loved this time. Be loved by me. :((",
     "Please, my Euanne. Let me court you.  Its time for us to take our relationship to a step higher, for us to be a little more closer into getting married. I love you, I love your heart, personality, eyes, lips, everything. I love you for being you, Euanne. I want to show you how serious I am to you, and prove that you're for being pursued and loved unconditionally."
 ];
 
