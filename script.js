@@ -72,7 +72,7 @@ const messages2 = [
     "Please give me a chance, baby :((",
     "I promise, Ill treat you the best po",
     "Is that final po? :((",
-    "Please, baby? Let me court you, I want to court you whether you allow me to court you or not. I want to show you na you're someone worth being pursued."
+    "Please, my Euanne. Let me court you.  Its time for us to take our relationship to a step higher, for us to be a little more closer into getting married. I love you, I love your heart, personality, eyes, lips, everything. I love you for being you, Euanne. I want to show you how serious I am to you, and prove that you're for being pursued and loved unconditionally."
 ];
 
 function pressNo2(){
