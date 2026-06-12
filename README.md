@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -10,14 +11,12 @@
 
 <style>
 
-/* RESET */
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
-/* BASE BACKGROUND */
 body{
     min-height:100vh;
     display:flex;
@@ -30,22 +29,12 @@ body{
     background-repeat:no-repeat;
 
     font-family:'Poppins',sans-serif;
+
+    padding:20px;
 }
 
-/* HIDE PAGES */
-.page{
-    display:none;
-    width:100%;
-    justify-content:center;
-    align-items:center;
-}
-
-.active{
-    display:flex;
-}
-
-/* CARD STYLE (PAGE 1) */
 .card{
+
     width:90%;
     max-width:420px;
 
@@ -68,244 +57,155 @@ body{
     margin-bottom:20px;
 }
 
-.bear{
+.flower{
+
     display:block;
     width:220px;
     max-width:100%;
-    margin:0 auto 25px auto;
+
+    margin:0 auto 20px auto;
+
+    cursor:pointer;
+
+    transition:.2s;
+
     filter:drop-shadow(0 10px 15px rgba(0,0,0,.25));
 }
 
-button{
-    width:100%;
-    padding:15px;
-    border:none;
-    border-radius:999px;
-    background:#ffd4e3;
-    font-size:13px;
+.flower:hover{
+    transform:scale(1.03);
+}
+
+.tapText{
+
+    color:#ff7ca5;
+
+    font-size:15px;
+
     font-weight:600;
-    cursor:pointer;
-    transition:.2s;
 }
 
-button:disabled{
-    opacity:.7;
-    cursor:not-allowed;
-}
+.letter{
 
-/* GAME UI (PAGE 2 & 3) */
-.gameCard{
-    width:85%;
-    max-width:360px;
-    background:rgba(255,255,255,0.08);
-    backdrop-filter:blur(12px);
-    border:1px solid rgba(255,255,255,0.15);
+    display:none;
+
+    margin-top:25px;
+
+    padding:20px;
+
     border-radius:20px;
-    padding:25px;
-    text-align:center;
-    box-shadow:0 0 25px rgba(0,0,0,0.6);
-    animation:pop .3s ease;
+
+    background:rgba(255,255,255,.7);
+
+    text-align:left;
+
+    color:#444;
+
+    animation:fadeIn .5s ease;
 }
 
-@keyframes pop{
-    from{transform:scale(0.8);opacity:0;}
-    to{transform:scale(1);opacity:1;}
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
-.gameCard h2{
-    font-size:18px;
-    margin-bottom:20px;
-    color:#fff;
-}
-
-.row{
-    display:flex;
-    justify-content:center;
-    gap:12px;
-}
-
-.gameBtn{
-    padding:12px 22px;
-    border:none;
-    border-radius:12px;
-    cursor:pointer;
-    font-size:14px;
-    min-width:100px;
-    transition:.2s;
-}
-
-.gameBtn:hover{
-    transform:scale(1.05);
-}
-
-.yes{
-    background:#4CAF50;
-    color:white;
-}
-
-.no{
-    background:#f44336;
-    color:white;
+.letter h3{
+    color:#ff7ca5;
+    margin-bottom:10px;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<!-- PAGE 1 -->
-<div id="page1" class="page active">
-    <div class="card">
+<div class="card">
 
-        <h1 class="title">Hi my baby :33</h1>
+```
+<h1 class="title">
+    Hi my baby :33
+</h1>
 
-        <img src="Flowers.jpg" class="bear">
+<img
+    src="Flowers.jpg"
+    id="flower"
+    class="flower"
+    onclick="tapFlower()"
+    alt="Flower Bouquet"
+>
 
-        <button id="nextBtn" disabled>
-            next :3 (5)
-        </button>
+<p id="tapText" class="tapText">
+    Touch the flower 🌸 (0/3)
+</p>
 
-    </div>
+<div id="letter" class="letter">
+
+    <h3>For You ❤️</h3>
+
+    <p>
+
+        Replace this entire message with your own letter.
+
+        <br><br>
+
+        This section only appears after the flower has been tapped
+        three times.
+
+        <br><br>
+
+        You can write anything here:
+        a confession, apology, appreciation message,
+        memories together, or your surprise.
+
+        <br><br>
+
+        Love,
+        <br>
+        Your Baby ❤️
+
+    </p>
+
 </div>
+```
 
-<!-- PAGE 2 -->
-<div id="page2" class="page">
-    <div class="gameCard">
-        <h2>May I ask you something?</h2>
-
-        <div class="row">
-            <button class="gameBtn yes" onclick="goPage3()">Yes</button>
-            <button id="noBtn1" class="gameBtn no" onclick="removeNoButton()">
-                No
-            </button>
-        </div>
-    </div>
-</div>
-
-<!-- PAGE 3 -->
-<div id="page3" class="page">
-    <div class="gameCard">
-        <h2>Did you miss me??</h2>
-
-        <div class="row">
-            <button class="gameBtn yes" onclick="goPage5()">
-                Yes
-            </button>
-
-            <button class="gameBtn no" onclick="goSecretEnding()">
-                No
-            </button>
-        </div>
-    </div>
-</div>
-
-<!-- PAGE 4 SECRET ENDING -->
-<div id="page4" class="page">
-    <div class="gameCard">
-        <h2>You really dont miss me po? :((</h2>
-
-        <p style="color:white;margin-bottom:20px;">
-            Are you still mad at me for what Ive told you? :(
-        </p>
-
-        <div class="row">
-            <button class="gameBtn yes" onclick="goPage5()">
-                Continue
-            </button>
-        </div>
-    </div>
-</div>
-
-<!-- PAGE 5 -->
-<div id="page5" class="page">
-    <div class="gameCard">
-        <h2>Uhmmm.... May I court you??</h2>
-
-        <div class="row">
-            <button class="gameBtn yes" onclick="goPage6()">Yes</button>
-            <button id="noBtn1" class="gameBtn no" onclick="removeNoButton()">
-                No
-            </button>
-        </div>
-    </div>
-</div>
-
-<!-- PAGE 6 CUSTOM PAGE -->
-<div id="page6" class="page">
-    <div class="gameCard">
-        <h2>Letter lagay q</h2>
-
-        <p style="color:white;margin-bottom:20px;">
-            Replace this text with anything you want.
-        </p>
-
-        <div class="row">
-            <button class="gameBtn yes">
-                Your Button
-            </button>
-        </div>
-    </div>
 </div>
 
 <script>
 
-    let noClicks = 0;
+let taps = 0;
 
-function removeNoButton(){
+function tapFlower(){
 
-    const btn = document.getElementById("noBtn1");
+    taps++;
 
-    noClicks++;
+    document.getElementById("tapText").innerHTML =
+        `Touch the flower 🌸 (${taps}/3)`;
 
-    btn.style.transform = `scale(${1 - noClicks * 0.2})`;
+    const flower = document.getElementById("flower");
 
-    if(noClicks >= 4){
-        btn.remove();
+    flower.style.transform = "scale(0.95)";
+
+    setTimeout(() => {
+        flower.style.transform = "scale(1)";
+    }, 120);
+
+    if(taps >= 3){
+
+        document.getElementById("tapText").innerHTML =
+            "You unlocked a letter ❤️";
+
+        document.getElementById("letter").style.display =
+            "block";
     }
-}
-function goSecretEnding(){
-
-    document.getElementById("page3").classList.remove("active");
-    document.getElementById("page4").classList.add("active");
-}
-
-function goPage5(){
-
-    document.getElementById("page3").classList.remove("active");
-    document.getElementById("page4").classList.remove("active");
-
-    document.getElementById("page5").classList.add("active");
-}
-
-    
-/* PAGE 1 COUNTDOWN */
-let seconds = 5;
-const btn = document.getElementById("nextBtn");
-
-const countdown = setInterval(() => {
-
-    seconds--;
-
-    if(seconds > 0){
-        btn.innerHTML = `next :3 (${seconds})`;
-    }else{
-        clearInterval(countdown);
-        btn.disabled = false;
-        btn.innerHTML = "next :3";
-
-        btn.onclick = () => {
-            document.getElementById("page1").classList.remove("active");
-            document.getElementById("page2").classList.add("active");
-        };
-    }
-
-},1000);
-
-
-/* PAGE NAV */
-function goPage3(){
-    document.getElementById("page2").classList.remove("active");
-    document.getElementById("page3").classList.add("active");
 }
 
 </script>
