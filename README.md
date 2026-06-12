@@ -171,7 +171,7 @@ button:disabled{
 <!-- PAGE 2 -->
 <div id="page2" class="page">
     <div class="gameCard">
-        <h2>I have a surprise for you, wanna see it?</h2>
+        <h2>May I ask you something?</h2>
 
         <div class="row">
             <button class="gameBtn yes" onclick="goPage3()">Yes</button>
@@ -185,8 +185,7 @@ button:disabled{
 <!-- PAGE 3 -->
 <div id="page3" class="page">
     <div class="gameCard">
-        <h2>Awww, my baby is not nagtatampo na ^^
-            did you miss me??</h2>
+        <h2>Did you miss me??</h2>
 
         <div class="row">
             <button class="gameBtn yes" onclick="goPage5()">
@@ -220,8 +219,7 @@ button:disabled{
 <!-- PAGE 5 -->
 <div id="page5" class="page">
     <div class="gameCard">
-        <h2>Aww, Im glad that you do.
-        i missed you, my baby. do u wanna see my letter na?</h2>
+        <h2>Uhmmm.... May I court you??</h2>
 
         <div class="row">
             <button class="gameBtn yes" onclick="goPage6()">Yes</button>
