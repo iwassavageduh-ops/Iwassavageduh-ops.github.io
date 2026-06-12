@@ -6,7 +6,7 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-<title>For My Baby ❤️</title>
+<title>For my Euanne</title>
 
 <style>
 
