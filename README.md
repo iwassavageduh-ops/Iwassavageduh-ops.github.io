@@ -140,22 +140,19 @@ body{
 
     <div id="letter" class="letter">
 
-        <h3>For You ❤️</h3>
+        <h3>May I Court youm</h3>
 
         <p>
 
-            Replace this entire message with your own letter.
+            test
 
             <br><br>
 
-            This section only appears after the flower has been tapped
-            three times.
+            test
 
             <br><br>
 
-            You can write anything here:
-            a confession, apology, appreciation message,
-            memories together, or your surprise.
+            test
 
             <br><br>
 
@@ -191,7 +188,7 @@ function tapFlower(){
     if(taps >= 3){
 
         document.getElementById("tapText").innerHTML =
-            "You unlocked a letter ❤️";
+            "Take your time to read, my baby";
 
         document.getElementById("letter").style.display =
             "block";
