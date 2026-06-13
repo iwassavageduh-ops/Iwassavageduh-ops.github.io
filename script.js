@@ -64,6 +64,8 @@ function showKiss(callback){
     },800);
 }
 
+playClick();
+
 let noClicks = 0;
 
 const messages = [
@@ -73,6 +75,7 @@ const messages = [
     "I promise you, baby. It will be worthy of your time.",
     "Sorry baby, but please hear me out. Ill kiss you in exchange of removing the no button po :pp"
 ];
+
 
 function pressNo(){
 
@@ -94,16 +97,34 @@ function pressNo(){
 
 function goPage3(){
 
-    document.getElementById("page2").style.display = "none";
-    document.getElementById("page3").style.display = "block";
+    playClick();
 
+    showKiss(()=>{
+
+        document.getElementById("page2").style.display = "none";
+
+        const page3 = document.getElementById("page3");
+
+        page3.style.display = "block";
+        page3.classList.add("pageFade");
+
+    });
 }
 
 function goPage4(){
 
-    document.getElementById("page3").style.display = "none";
-    document.getElementById("page4").style.display = "block";
+    playClick();
 
+    showKiss(()=>{
+
+        document.getElementById("page3").style.display = "none";
+
+        const page4 = document.getElementById("page4");
+
+        page4.style.display = "block";
+        page4.classList.add("pageFade");
+
+    });
 }
 
 let noClicks2 = 0;
@@ -115,6 +136,8 @@ const messages2 = [
     "I love you, my baby. Please let yourself be loved this time. Let yourself be loved by me. :((",
     "Please, my Euanne. Let me court you.  Its time for us to take our relationship to a step higher, for us to be a little more closer into getting married. I love you, I love your heart, personality, eyes, lips, everything. I love you for being you, Euanne. I want to show you how serious I am to you, and prove that you're for being pursued and loved unconditionally."
 ];
+
+playClick();
 
 function pressNo2(){
 
@@ -133,3 +156,33 @@ function pressNo2(){
         noBtn.remove();
     }
 }
+
+function typeTitle(id,text){
+
+    const el = document.getElementById(id);
+
+    el.innerHTML = "";
+
+    let i = 0;
+
+    const interval = setInterval(()=>{
+
+        el.innerHTML += text.charAt(i);
+
+        i++;
+
+        if(i >= text.length){
+            clearInterval(interval);
+        }
+
+    },60);
+}
+
+window.onload = ()=>{
+
+    typeTitle("title1","For my Euanne.");
+};
+
+typeTitle("title2","May I ask something?");
+typeTitle("title3","May I court you?");
+typeTitle("title4","Yayyy. Please read this, baby ❤️");
