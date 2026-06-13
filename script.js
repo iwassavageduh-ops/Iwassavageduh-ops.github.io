@@ -23,6 +23,39 @@ function tapFlower(){
     }
 }
 
+const clickSound = document.getElementById("clickSound");
+const kissSound = document.getElementById("kissSound");
+
+function playClick(){
+    clickSound.currentTime = 0;
+    clickSound.play();
+}
+
+function showKiss(callback){
+
+    const overlay = document.getElementById("kissOverlay");
+    const img = document.getElementById("kissImage");
+
+    overlay.style.display = "flex";
+
+    img.classList.remove("kissAnim");
+    void img.offsetWidth;
+    img.classList.add("kissAnim");
+
+    kissSound.currentTime = 0;
+    kissSound.play();
+
+    setTimeout(()=>{
+
+        overlay.style.display = "none";
+
+        if(callback){
+            callback();
+        }
+
+    },800);
+}
+
 let noClicks = 0;
 
 const messages = [
