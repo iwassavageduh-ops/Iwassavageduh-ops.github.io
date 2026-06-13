@@ -2,10 +2,9 @@ let taps = 0;
 
 function tapFlower(){
 
-    taps++;
+    playClick();
 
-    document.getElementById("tapText").innerHTML =
-        `Touch the flower 3 times 🌸`;
+    taps++;
 
     const flower = document.getElementById("flower");
 
@@ -17,9 +16,18 @@ function tapFlower(){
 
     if(taps >= 3){
 
-        document.getElementById("page1").style.display = "none";
-        document.getElementById("page2").style.display = "block";
+        flower.classList.add("flowerZoom");
 
+        setTimeout(()=>{
+
+            document.getElementById("page1").style.display = "none";
+
+            const page2 = document.getElementById("page2");
+
+            page2.style.display = "block";
+            page2.classList.add("pageFade");
+
+        },1000);
     }
 }
 
