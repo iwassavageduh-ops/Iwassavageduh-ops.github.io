@@ -5,7 +5,7 @@ function tapFlower(){
     taps++;
 
     document.getElementById("tapText").innerHTML =
-        `Touch the flower 3 times 🌸`;
+        `Tap Nailong 3 times`;
 
     const flower = document.getElementById("flower");
 
@@ -26,11 +26,11 @@ function tapFlower(){
 let noClicks = 0;
 
 const messages = [
-    "Aww, are you nagtatampo po??",
-    "Still not allowed to ask? :((",
-    "Arent you curious about my question, baby?",
+    "Aww, my Elyse want me to ask :(",
+    "Still ayaw bebe? :((",
+    "Arent you curious about my question po baby?",
     "I promise you, baby. It will be worthy of your time.",
-    "Sorry baby, but please hear me out. Ill kiss you in exchange of removing the no button po :pp"
+    "Sorry baby, but please listen po. Ill kiss you kapalit ng pag remove sa no button po :pp"
 ];
 
 function pressNo(){
