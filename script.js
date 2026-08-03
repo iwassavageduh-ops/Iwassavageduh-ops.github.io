@@ -26,10 +26,10 @@ function tapFlower(){
 let noClicks = 0;
 
 const messages = [
-    "Aww, my Elyse want me to ask :(",
+    "Aww, my Elyse doesnt want me to ask :(",
     "Still ayaw bebe? :((",
-    "Arent you curious about my question po baby?",
-    "I promise you, baby. It will be worthy of your time.",
+    "Arent you curious about my question po bebe?",
+    "I promise you, bebe. It will be worthy of your time.",
     "Sorry baby, but please listen po. Ill kiss you kapalit ng pag remove sa no button po :pp"
 ];
 
@@ -68,11 +68,11 @@ function goPage4(){
 let noClicks2 = 0;
 
 const messages2 = [
-    "Awww, you dont want me to pursue you po?",
-    "Please baby, give me a chance to prove myself to you",
-    "I'll prove with my actions that you're worthy of everything, that you're worthy of being loved.",
-    "I love you, my baby. Please let yourself be loved this time. Let yourself be loved by me. :((",
-    "Please, my Euanne. Let me court you.  Its time for us to take our relationship to a step higher, for us to be a little more closer into getting married. I love you, I love your heart, personality, eyes, lips, everything. I love you for being you, Euanne. I want to show you how serious I am to you, and prove that you're for being pursued and loved unconditionally."
+    "Awww, sure na po yan baby?",
+    "Please baby, let me prove that im capable enough to love you",
+    "I'll show with my actions that you're worthy, you're worthy of being loved, heard, seen, and known.",
+    "I love you, my Elyse. I am sure sayo, I always have been. Let yourself be loved by me, my baby.",
+    "Please, mi amor. Let me court you.  Its time for us to take our relationship to a step higher, for us to be a little more closer into getting married. I love you, I love your heart, personality, eyes, lips, everything. I love you for being you, Elyse. I want to show you how serious I am to you, and prove that you're for being pursued and loved unconditionally."
 ];
 
 function pressNo2(){
