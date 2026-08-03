@@ -30,7 +30,7 @@ body{
 
 .title{
     font-family:'Parisienne',cursive;
-    color:#ff7ca5;
+    color:#515bcf;
     font-size:3rem;
     margin-bottom:20px;
 }
@@ -54,7 +54,7 @@ body{
 }
 
 .tapText{
-    color:#ff7ca5;
+    color:#515bcf;
     font-size:15px;
     font-weight:600;
 }
@@ -80,13 +80,13 @@ button{
 }
 
 .noBtn{
-    background:#ff8ba7;
+    background:#515bcf;
     color:white;
 }
 
 .message{
     margin-top:20px;
-    color:#ff7ca5;
+    color:#515bcf;
     font-weight:600;
     min-height:60px;
 }
